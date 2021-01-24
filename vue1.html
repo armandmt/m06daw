@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .color_vermell {
+        color: red;
+    }
+    .color_verd {
+        color: green; 
+    }
+
+</style>
+<body>
+    <h1>Primer exemple de vue.js</h1>
+    <div id="app">
+        <p>{{ salutacions }}</p>
+    
+        <h2> ==========Directives===========</h2 >
+        <h3>v-show</h3>
+            <p v-show="actiu"> Text nomes si actiu=true</p>
+            <p v-show="numero>10"> Text nomes si numero>10</p>
+        <h3>v-if - condicional</h3>
+            <p v-if="actiu==true">Està actiu</p>
+            <p v-else>No és actiu</p>
+        <h3>v-for - bucle</h3>
+        <ul>
+            <li v-for="numero in llista" >Número: {{ numero }}</li>
+        </ul>
+        <ul>
+            <li v-for="n in 5" :key="n" >Núm: {{ n }}</li>
+        </ul>
+        
+        <h3>v-html - per pintar html</h3>
+        <p>{{ blog }}</p>
+        <p v-html="blog"></p>
+
+        <h3>Binding</h3>
+        <p>
+            Qualsevol canvi en cadena, es reflexa aquí:  reactiu <br>
+            <input type="text" v-model="cadena">            
+        </p>
+        <p>  {{ cadena }} </p>
+
+        <h3>Esdeveniments i funcions</h3>
+        <button @click="saludar()">Saludar</button>
+        <br>
+        <input type="text" placeholder="noms" v-model="nom_complert">
+        <a href="#" @click="verificarNomComplert()">Verificar Nom</a>
+        <p style="color: red ;">{{ error_validacio }}</p>
+
+        <h3>Binding de classes</h3>
+        <label for="nom" :class="{ color_verd:text_success, color_vermell:text_error} ">
+            Noms:
+        </label>
+        <input type="text" v-model="nom"></input>
+        <button @click="verificarNom()">Comprovar</button>
+        <h3>Binding de estils</h3>
+        <input type="text" v-modwl="sizetxt">
+        <button @click="canviarText()">Canviar mida</button>
+        <p :style="{ fontSize: font_text} ">M06 Vue.js</p>
+        
+        
+
+
+    </div>
+
+<!--    <div id="app2">
+        <p>{{ salutacions2 }}</p>
+    </div>
+-->
+    <script src="vue1.js"></script>
+
+</body>
+</html>
