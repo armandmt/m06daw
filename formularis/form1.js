@@ -24,7 +24,7 @@ function enableSubmit (idForm) {
 
 function disableSubmit (idForm) {
 	$(idForm + " button.submit").attr("disabled", "disabled");
-}
+} 
 
 function checkForm (idForm) {
 	$(idForm + " *").on("change keydown", function() {
