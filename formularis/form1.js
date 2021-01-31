@@ -28,13 +28,13 @@ function disableSubmit (idForm) {
 
 function checkForm (idForm) {
 	$(idForm + " *").on("change keydown", function() {
-		if (checkInput("#nombre", namePattern) && 
-			checkInput("#apellidos", namePattern) && 
+		if (checkInput("#nom", namePattern) && 
+			checkInput("#cognoms", namePattern) && 
             checkInput("#email", emailPattern) && 
-			checkSelect("#edad") && 
-			checkTextarea("#comentario") && 
+			checkSelect("#edat") && 
+			checkTextarea("#comentari") && 
 			checkRadioBox("#legal") &&
-            checkRadioBox("[name=boletin]"))
+            checkRadioBox("[name=butlleti]"))
 		    {
 			    enableSubmit(idForm);
 		    } else {
@@ -44,5 +44,5 @@ function checkForm (idForm) {
 }
 
 $(function() {
-	checkForm("#contacto");
+	checkForm("#contacte");
 });
