@@ -8,42 +8,42 @@
           //Guardar en variables el valor que tengan las cajas de texto
           //Por medio de los id's
           //Y tener mejor manipulación de dichos valores
-          var nombre = $("#itNombre").val();
-          var correo = $("#itMail").val();
-          var asunto = $("#itAsunto").val();
-          var edad = $("#itEdad").val();
+          var nom = $("#itNom").val();
+          var correu = $("#itMail").val();
+          var assumpte = $("#itAssumpte").val();
+          var edat = $("#itEdat").val();
 
           // --- Condicionales anidados ----
           //Si nombre está vacío
           //Muestra el mensaje
           //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-          if(nombre == ""){
-              $("#mensaje1").fadeIn("slow");
+          if(nom == ""){
+              $("#missatge1").fadeIn("slow");
               return false;
           }
           //en otro caso, el mensaje no se muestra
           else{
-              $("#mensaje1").fadeOut();
+              $("#missatge1").fadeOut();
 
               //Si correo está vacío y la expresión NO corresponde -test es función de JQuery
               //Muestra el mensaje
               //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-              if(correo == "" || !expr.test(correo)){
-                  $("#mensaje2").fadeIn("slow");
+              if(correu == "" || !expr.test(correu)){
+                  $("#missatge2").fadeIn("slow");
                   return false;
               }
               else{
-                  $("#mensaje2").fadeOut();
+                  $("#missatge2").fadeOut();
 
-                  if(asunto == ""){
-                      $("#mensaje3").fadeIn("slow");
+                  if(assumpte == ""){
+                      $("#missatge3").fadeIn("slow");
                       return false;
                   }
                   else{
-                      $("#mensaje3").fadeOut();
+                      $("#missatge3").fadeOut();
 
-                      if(edad == "" || !expr2.test(edad)){
-                          $("#mensaje4").fadeIn("slow");
+                      if(edat == "" || !expr2.test(edat)){
+                          $("#missatge4").fadeIn("slow");
                           return false;
                       }
                   }
