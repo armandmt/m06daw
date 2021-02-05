@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://unpkg.com/vue@next"></script>
     
     <title>Document</title>
 </head>
 <body>
     <div id="app">
-        <h1>{{  titol  }}</h1>
-        <h2>El meu saldo disponible és {{ quantitat }} </h2>
+        <h1>{{  majusculesText  }}</h1>
+        <h2 
+            class="bg-dark"
+            :class="colorQuantitat" 
+        >
+
+            El meu saldo disponible és {{ quantitat }}
+        
+        </h2>
+
+
+        
         <a v-bind:href="enllac"> Enllaç </a><br/>
         <a :href="enllac"> Enllaç 2</a>
         <hr>
@@ -34,7 +45,15 @@
 
         <button v-on:click="afegirSaldo"  >Afegir saldo</button>
         <hr>
-        <button @click="reduirSaldo" :disabled="desactivar" >Reduir saldo</button>
+        <button @click="reduirSaldo(100 )" :disabled="desactivar" >Reduir saldo</button>
+        <hr>
+        
+        <footer-banc 
+        
+            :valor="quantitat"
+            data=" febrer 2021"
+            
+        />
 
 
     </div>
@@ -43,6 +62,7 @@
 
 
     <script src="vue2.js"></script>
+    <script src="components/Footer.js"></script>
     <script >
         const mountedApp = app.mount("#app");
     </script>

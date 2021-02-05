@@ -20,12 +20,26 @@ const app= Vue.createApp({
             this.desactivar= false
         }
     },
-    reduirSaldo()  {
+    reduirSaldo(valor)  {
         
-        this.quantitat = this.quantitat - 100;
+        this.quantitat = this.quantitat - valor;
         if (this.quantitat <= 0) {
             this.desactivar= true            
         }
+    }
+ },
+ computed:  {
+
+    colorQuantitat() {
+
+        return this.quantitat > 500 ? "text-success" : "text-danger"
+
+
+    },
+    majusculesText() {
+
+        return this.titol.toUpperCase()
+
     }
  }
 
