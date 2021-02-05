@@ -23,6 +23,18 @@
                 <span style="color:red"> {{ quantitat }} </span>
         </h2>
         <h2 v-else> Sense quantitat:  {{quantitat}}</h2>
+        <hr>
+        
+        <h2> Els meus serveis disponibles</h2>
+        <ul>
+            <li v-for="item in serveis">{{ item }} </li>
+            <li v-for="(item,index) in serveis" :key="index"> {{ index + 1 }} -  {{ item }} </li>
+
+        </ul>
+
+        <button v-on:click="afegirSaldo"  >Afegir saldo</button>
+        <hr>
+        <button @click="reduirSaldo" :disabled="desactivar" >Reduir saldo</button>
 
 
     </div>
