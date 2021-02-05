@@ -11,8 +11,23 @@
     <div id="app">
         <h1>{{  titol  }}</h1>
         <h2>El meu saldo disponible és {{ quantitat }} </h2>
-        <a v-bind:href="enllac"> Enllaç </a>
+        <a v-bind:href="enllac"> Enllaç </a><br/>
+        <a :href="enllac"> Enllaç 2</a>
+        <hr>
+        <h2 v-if="estat">Compte actiu</h2>
+        <h2 v-else>Compte inactiu</h2>
+        <hr>
+        <h2 v-if="quantitat>500">Quantitat:  {{ quantitat }}</h2>
+        <h2 v-else-if="quantitat <=500 && quantitat > 0">
+                Quantitat:
+                <span style="color:red"> {{ quantitat }} </span>
+        </h2>
+        <h2 v-else> Sense quantitat:  {{quantitat}}</h2>
+
+
     </div>
+
+    
 
 
     <script src="vue2.js"></script>
