@@ -7,14 +7,18 @@ recull  = ( id ) => {
     return new Promise (( resolve, reject) => {
 
 
+            if ( id in valors) {
+
+                resolve(id);
+            }
+            else{
+                reject (id);
+            }
 
 
-
-    };
-
-
-
-
+    });
 
 
 }
+
+recull (10).then ( ide => console.log(ide));
