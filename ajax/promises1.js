@@ -27,11 +27,11 @@ fetch("https://reqres.in/api/users?delay=5")
     })
     */
     
-    
-   
+      
     
     fetch1 = () => fetch("https://reqres.in/api/users/3");   // retorna 
     fetch2 = () => fetch("https://reqres.in/api/users/5");   // una promesa
+    fetch3 = () => fetch("https://reqres.in/api/users?delay=3");   // una promesa
 
     
     // ([d1.d2]) equival a "dades" i dades[0],dades[1] dins el codi
@@ -46,17 +46,29 @@ fetch("https://reqres.in/api/users?delay=5")
             d2.json().then ( rebut => {
                 console.log(rebut.data.first_name);
             })
-    }
-
-     )
-     .catch( err => {
-
+    })
+    .catch( err => {
         console.log (err);
         console.log("oohhh");
 
      })
+     .finally ( () => {
+        console.log ("Això ha acabat, bé o malament");
+     })
 
-     
+     fetch3 = () => fetch("https://reqres.in/api/users?delay=6");
+     fetch4 = () => fetch("https://reqres.in/api/users?delay=3");
+     fetch5 = () => fetch("https://reqaaaares.in/api/users");  // Incompleix promesa
+
+     Promise.race ([fetch3(), fetch4(), fetch5()])   
+     .then (console.log)
+     .catch(console.warn);
+
+     Promise.race ([fetch3(),fetch4()])
+     .then (console.log)
+     .catch(console.warn);
+
+
 
 
 
