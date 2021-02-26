@@ -14,11 +14,6 @@ function adormir (temps)
 adormir(3000)
 
 
-
-
-
-
-
 async function sleep(temps) {
     console.log("Abans 1")    
     await timeout(temps);
