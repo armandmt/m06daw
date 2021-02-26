@@ -2,7 +2,7 @@
 async function todo(id) {
 
     try {
-        data = await fetch("https://jsonplaceholder.typicode.com/todos/"+id)
+        data =  await fetch("https://jsonplaceholder.typicode.com/todos/"+id)
         dades = await data.json()
         console.log (dades.title);
 
