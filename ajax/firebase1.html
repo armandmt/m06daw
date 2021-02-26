@@ -8,15 +8,22 @@
 </head>
 <body>
 
+<div align=center>
+    <form id="tasques" name="tasques">
 
-    <form name="tasques">
-
-        <input type="text" name="titol" id="titol">
-        <text area name="descripcio" id="descripcio" > </text>
-        <input type="date" name="data" id="data" >
-        <input type="submit" name="enviar" id="enviar">
+        <label for="titol">Títol</label><br>
+        <input type="text" name="titol" id="titol"><br>
+        <label for="descripcio">Descripcio</label><br>
+        <input type="text" name="descripcio" id="descripcio" ><br/>
+        <label for="data">Data</label><br>
+        <input type="date" name="data" id="data" ><br/>
+        <button type="submit" name="enviar" id="enviar">Enviar</button>
 
     </form>
+
+</div>
+
+    
 
 <script src="firebase1.js"></script>
 </body>

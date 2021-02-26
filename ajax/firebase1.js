@@ -1,5 +1,18 @@
-document.querySelector("#enviar").addEventListener("submit", function ()
+
+document.querySelector("#tasques").addEventListener("submit", function (e)
     {
-        console.log("Hola bon dia")
+        e.preventDefault();
+        console.log("Hola bon dia" + e)
+
+        let titol = document.querySelector("#titol").value
+        let descripcio = document.querySelector("#descripcio").value
+        let data = document.querySelector("#data").value
+
+        console.log ( {titol,descripcio,data})
+
+        // Enviar al servidor BD
+        // https://practiques-758e3-default-rtdb.firebaseio.com/
+        
+
     }
 )
