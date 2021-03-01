@@ -38,6 +38,64 @@ async function setDades(tasca) {   // Enviem un registre
         }
 }
 
+async function setDadesPut(tasca) {   // Enviem un registre
+    
+    // Presuposem que "id" el tenim creat i actualitzat
+
+    try {
+        const res = await fetch("https://practiques-758e3-default-rtdb.firebaseio.com/tasques/" + id +".json", {
+            method: 'PUT',  // Genera un id aleatori
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(tasca)
+        })
+        const db = await res.json()
+        longi++
+        console.log(db)
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+async function updateDades(tasca) {   // Modifiquem un registre
+    
+    // Presuposem que "id" el tenim creat i actualitzat
+
+    try {
+        const res = await fetch("https://practiques-758e3-default-rtdb.firebaseio.com/tasques/" + id +".json", {
+            method: 'PATCH',  // Genera un id aleatori
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(tasca)
+        })
+        const db = await res.json()
+        longi++
+        console.log(db)
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+async function deleteDades(id) {   // Modifiquem un registre
+    
+    // Presuposem que "id" el tenim creat i actualitzat
+
+    try {
+        const res = await fetch("https://practiques-758e3-default-rtdb.firebaseio.com/tasques/" + id +".json", {
+            method: 'DELETE',  // Genera un id aleatori
+        })
+        const db = await res.json()
+        longi++
+        console.log(db)
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 async function visualitzaTasques() {
 
