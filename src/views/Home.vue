@@ -1,18 +1,30 @@
 <template>
+  <Header />
+  <hr />
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    Estem al Home
+    {{ colorum }}
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { useStore } from "vuex";
+import { computed, ref } from "vue";
+import Header from "../components/Header";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+  },
+  setup() {
+    let store = useStore();
+    let colorum = computed(() => {
+      console.log(store.state.color);
+      return store.state.color;
+    });
+    0
+    return { colorum };
+  },
+};
 </script>
