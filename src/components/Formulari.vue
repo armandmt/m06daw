@@ -1,4 +1,5 @@
 <template>
+<h1> Formulari </h1>
   <form @submit.prevent="envia">
     <input type="text" v-model="nom" /><br />
     <input type="text" v-model="cognom" /><br />
