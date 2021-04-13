@@ -1,19 +1,27 @@
 <template>
-  <Layout>
   <div class="about">  
     <h1>Estem al home</h1>
-    <h2> oe oe oe </h2>
-    <router-link :to="{ name: 'About' }">Ves a l'About</router-link>
+    <h2> Recorrem un array/json </h2>
+    <p v-for="g in valors"  :key="g.id">{{g.nom}}</p>
   </div>
-  </Layout>
 </template>
 
 <script>
-import Layout from "../layouts/Layout"
 export default {
 
-components: {
-  Layout,
+setup() {
+
+  let valors = [
+    { id:1, nom:"Joan"},
+    { id:2, nom:"Maria"},
+    { id:3, nom:"Josep"},
+    { id:4, nom:"Pere"},
+    { id:5, nom:"Cristina"},
+  ];
+  return {
+    valors
+  }
+
 }
 }
 </script>
