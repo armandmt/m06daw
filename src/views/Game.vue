@@ -9,14 +9,10 @@ import { useRoute } from 'vue-router'
 
 export default {
 
-
     setup() {
-
         // Aquí això dona error
         // console.log($route.params.nom);
-
         const ruta = useRoute();
-
         console.log (ruta.params.nom);
 
 
