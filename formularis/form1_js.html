@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form1_js.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="contacte" id="contacte">
+        
+        <label for="nom">Nom</label>
+        <input name="nom" id="nom" size="30"/>        
+        
+        <label for="cognoms">Cognoms</label>
+        <input name="cognoms" id="cognoms" size="30"/>
+        
+        <label for="email">Email</label>
+        <input name="email" id="email" size="45"/>
+        
+        <label for="edat">Edat</label>
+        <select name="edat" id="edat">
+            <option></option>
+            <option value="18-25">18 a 25 anys</option>
+            <option value="26-45">26 a 45 anys</option>
+            <option value="46-65">46 a 55 anys</option>
+            <option value="66+">Més de 65</option>
+        </select>
+    
+        <label for="comentari">Comentari</label>
+        <textarea name="comentari" id="comentari" cols="40" rows="4"></textarea> 
+    
+        <label for="legal"><input type="checkbox" name="legal" id="legal" /> Estic d'acord</label>
+        <label>Vols rebre el nostre butlletí? 
+            <input type="radio" name="butlleti" value="sisi" />Si 
+            <input type="radio" name="butlleti" value="nono" />No
+        </label>
+        <button class="submit">Enviar</button>
+
+    </form>
+    <script src="form1_js.js"></script>
+
+</body>
+</html>
+
+
